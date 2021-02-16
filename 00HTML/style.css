@@ -1,19 +1,31 @@
 aside {
     width: 200px;
-    height: 400px;
-    background-color: greenyellow;
+    height: 600px;
+    background-color: black;
 }
 
 aside h3 {
-    color: red;
+    color: white;
     padding-left: 30px;
     padding-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section {
+aside nav ul {
+    color: white;
+}
+
+#blog {
     margin-left: 220px;
-    margin-top: -400px;
+    margin-top: -600px;
+}
+
+#comment {
+    margin-left: 220px;
+}
+
+#comment article {
+    margin-bottom: 40px;
 }
 
 section article p {
