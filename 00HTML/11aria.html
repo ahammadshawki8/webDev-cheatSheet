@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria</title>
+</head>
+
+<body>
+    <!--Aria Roles are generally used to give divs specific name,
+    so that it is kinda universal code when we need to style it.
+    And it also gives us additional features in most of the cases.
+    it can be used
+        * Add/Modify semantics
+        * Express mre UI patterns
+        * Add extra labeling
+        * Advance controlling
+        * Make contents live-->
+
+    <!--Presentation-->
+    <div style="float: left;">Some content on the left</div>
+    <div style="float: right;">Some content on the right</div>
+    <div role="presentation" style="clear: both;"></div>
+
+    <!--Alert-->
+    <div role="alert" aria-live="assertive">Your time will end in 2 minutes</div>
+
+    <!--AlertDialouge-->
+    <div role="alertdialog">
+        <h1>Warning</h1>
+        <div role="alert">Your time will end in 2 minutes</div>
+    </div>
+
+    <!--Application-->
+    <div role="application">
+        <h1>Calculator</h1>
+        <input type="number" name="num1" id="num1"> + <input type="number" name="num2" id="num2"> =
+        <span id="result"></span>
+    </div>
+
+    <!--Button-->
+    <button role="button">Click Here</button>
+
+    <!--ColumnHeader + Cell-->
+    <table>
+        <thead>
+            <th role="columnheader">Name</th>
+            <th role="columnheader">Class</th>
+            <th role="columnheader">Subject</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td role="cell">Ahammad</td>
+                <td role="cell">High School</td>
+                <td role="cell">Computer Science</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Grid + GridCell-->
+    <table role="grid">
+        <thead>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Subject</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td role="gridcell">Ahammad</td>
+                <td role="gridcell">High School</td>
+                <td role="gridcell">Computer Science</td>
+            </tr>
+        </tbody>
+    </table <!--CheckBox-->
+    <input type="checkbox" role="checkbox" aria-checked="false">
+    I agree to the Terms and Conditions
+
+    <!--ComboBox-->
+    <input type="text" name="comboBox" id="comboBox" role="combobox" aria-expanded="false">
+
+    <!--complementary-->
+    <div role="complementary">
+        <h1>More Articles</h1>
+        <ul>
+            <li>More 1</li>
+            <li>More 2</li>
+            <li>More 3</li>
+        </ul>
+    </div>
+
+    <!--ConentInfo-->
+    <p role="contentinfo">
+        Author: Ahammad Shawki <br>
+        Source: HashNode
+    </p>
+
+    <!--Term + Defination-->
+    <div role="term" aria-labelledby="def1">Love</div>
+    <div role="definition" id="def1">An instense feeling of deep affecion</div>
+
+    <!--Dialog-->
+    <div role="dialog">
+        <p>Are you sure?</p>
+        <button role="button">Yes</button>
+        <button role="button">No</button>
+    </div>
+
+    <!--Directory-->
+    <ul role="directory">
+        <li><a href="#Chapter1">Chapter1</a></li>
+        <li><a href="#Chapter2">Chapter2</a></li>
+        <li><a href="#Chapter3">Chapter3</a></li>
+    </ul>
+
+    <!--Document-->
+    <div role="document">
+        <h1>The life of Ahammad</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus provident iure architecto ipsam quia quidem
+            animi sed explicabo, molestias beatae, inventore voluptas sit facilis suscipit. Tempore eveniet fuga
+            temporibus quae.</p>
+    </div>
+
+    <!--Group-->
+    <div role="group">
+        <button role="button">Yes</button>
+        <button role="button">Maybe</button>
+        <button role="button">No</button>
+    </div>
+
+    <!--Heading-->
+    <div role="heading">Introduction</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae laborum corrupti a consequuntur facilis
+        pariatur, harum autem velit incidunt reiciendis iusto, quos cumque officia veniam, vel reprehenderit ea magni.
+    </p>
+
+    <!--Img-->
+    <figure role="img">
+        <img src="images/sample-600.jpg">
+        <figcaption>This is a sample pic</figcaption>
+    </figure>
+
+    <!--List + ListItem-->
+    <ul role="list">
+        <li role="listitem">Item 1</li>
+        <li role="listitem">Item 1</li>
+        <li role="listitem">Item 1</li>
+    </ul>
+
+    <!--ListBox-->
+    <ul role="listbox">
+        <li role="listitem">Item 1</li>
+        <li role="listitem">Item 1</li>
+        <li role="listitem">Item 1</li>
+    </ul>
+
+    <!--Log-->
+    <ul role="log">
+        <li>User 1 Logged in</li>
+        <li>User 2 Logged in</li>
+        <li>User 1 Logged out</li>
+    </ul>
+
+    <!--marquee-->
+    <ul role="marquee">
+        <li>Dow +0.26%</li>
+        <li>Nasdaq +0.54%</li>
+        <li>S&amp;P +0.44%</li>
+    </ul>
+
+    <!--Menu + MenuItem-->
+    <ul role="menu">
+        <li role="menuitem">Files</li>
+        <li role="menuitem">Settings</li>
+        <li role="menuitem">View</li>
+        <li role="menuitem">Help</li>
+    </ul>
+
+    <!--MenuBar + MenuItemCheckBox + MenuItemRadio-->
+    <ul role="menubar">
+        <li role="menuitemcheckbox" aria-checked="true">Word Wrap</li>
+        <li role="menuitemradio" aria-checked="true">left</li>
+        <li role="menuitemradio" aria-checked="false">Center</li>
+        <li role="menuitemradio" aria-checked="false">Right</li>
+    </ul>
+
+    <!--Note-->
+    <p role="note">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus dolorem officia error saepe a sed
+        reprehenderit iure, enim molestiae obcaecati excepturi sint facilis voluptate quia laudantium. Accusantium hic
+        aut corporis.</p>
+
+    <!--ListBox + Option-->
+    <ul role="option">
+        <li role="option">Option 1</li>
+        <li role="option">Option 2</li>
+        <li role="option">Option 3</li>
+    </ul>
+
+    <!--ProgressBar-->
+    <progress role="progressbar" value="25" max="100">25%</progress>
+
+</body>
+
+</html>
