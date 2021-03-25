@@ -1,0 +1,10 @@
+@use "../abstract" as abs;
+
+%btn-base {
+    color: darken(abs.$primary-color,30%);
+    background-color: abs.$secondary-color;
+    border: none;
+}
+.btn {
+    @extend %btn-base;
+}
